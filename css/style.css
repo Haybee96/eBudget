@@ -1,3 +1,17 @@
+:root {
+  /* Colors */
+  --color-dark: #000;
+  --color-dark-blue: #001474;
+  --color-light-blue: #112fdd;
+  --color-white: #fff;
+  --color-light-red: #f73a1d;
+  --color-dark-red: #a71f0a;
+
+  /* Fonts */
+  --global-font-size: 62.5%;
+  --global-font-family: "PT Sans", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +23,8 @@ html {
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
-  font-size: 62.5%;
+  font-family: var(--global-font-family);
+  font-size: var(--global-font-size);
 }
 
 nav {
@@ -19,4 +33,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
+}
+
+nav .logo h4,
+nav .date {
+  color: var(--color-dark-blue);
 }
