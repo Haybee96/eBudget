@@ -149,27 +149,135 @@ form > :not(:last-child) {
   margin-right: 0.2rem;
 }
 
-form select,
-form input[type="text"],
-form input[type="number"] {
+form .type__input,
+form .description__input,
+form .amount__input {
   font-size: 1rem;
   font-family: var(--global-font-family);
   padding: 0.5rem 0.7rem;
-  border: 1px solid var(--color-light-blue);
+  border: 1px solid #bebebe;
   outline: none;
   background-color: #fff;
   border-radius: 5px;
+  transition: border 0.3s ease-in;
 }
 
-form input[type="text"] {
-  min-width: 400px;
+form .type__input:focus,
+form .description__input:focus,
+form .amount__input:focus {
+  border: 1px solid var(--color-light-blue);
+  outline: none;
+}
+
+form .description__input {
+  width: 400px;
 }
 
 form button {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   color: var(--color-light-blue);
+  cursor: pointer;
 
   outline: none;
   border: none;
-  background-color: transparent;
+  background: none;
+}
+
+form button:active {
+  transform: translateY(1px);
+}
+
+.budget_output {
+  /* background-attachment: scroll; */
+}
+
+.budget__output-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.budget__output-income .budget__output-income-text,
+.budget__output-expense .budget__output-expense-text {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.budget__output-income .budget__output-income-text {
+  color: var(--color-dark-blue);
+}
+
+.budget__output-expense .budget__output-expense-text {
+  color: var(--color-dark-red);
+}
+
+.budget__output-income-lists,
+.budget__output-expense-lists {
+  width: 500px;
+}
+
+.budget__output-income-lists .budget__output-income-list,
+.budget__output-expense-lists .budget__output-expense-list {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-transform: capitalize;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.budget__output-income-list-item,
+.budget__output-expense-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.budget__output-income-val,
+.btn-delete-icon {
+  color: var(--color-light-blue);
+}
+
+.budget__output-expense-val,
+.btn-delete-icon {
+  color: var(--color-light-red);
+}
+
+.btn-delete-icon {
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 1.1rem;
+}
+
+.budget__output-income-lists > :not(:last-child),
+.budget__output-expense-lists > :not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+
+.budget__output-expense-percentage {
+  background-color: var(--color-dark-red);
+  padding: 0 0.1rem;
+  min-width: 35px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.4rem;
+  font-family: var(--inner-font);
+  color: var(--color-white);
+}
+
+.red {
+  color: var(--color-light-red);
+}
+
+.red-focus:focus {
+  border: 1px solid var(--color-light-red);
 }

@@ -28,7 +28,7 @@
           >
         </div>
         <div class="date">
-          <p>Budget in %month, year%</p>
+          <p>Budget in <span>%month, year%</span></p>
         </div>
       </nav>
     </header>
@@ -40,7 +40,7 @@
         <!-- Income budget -->
         <div class="budget__income">
           <div class="budget__income-text">Income</div>
-          <div class="budget__income-value">+ 5,100</div>
+          <div class="budget__income-value">+ 5,100.00</div>
         </div>
 
         <!-- Budget value -->
@@ -50,7 +50,7 @@
         <div class="budget__expense">
           <div class="budget__expense-text">Expense</div>
           <div class="budget__expense-box">
-            <div class="budget__expense-value">- 1,500</div>
+            <div class="budget__expense-value">- 1,500.00</div>
             <div class="budget__expense-percentage">27%</div>
           </div>
         </div>
@@ -60,12 +60,12 @@
 
     <!-- Budget form input -->
     <section class="budget__form">
-      <form action="#">
+      <form>
         <!-- Form type -->
         <div class="budget__form-type">
-          <select name="select" id="select">
-            <option value="+" selected>+</option>
-            <option value="-">-</option>
+          <select class="type__input" id="select">
+            <option value="inc" selected>+</option>
+            <option value="exp">-</option>
           </select>
         </div>
 
@@ -75,6 +75,7 @@
             type="text"
             name="description"
             id="description"
+            class="description__input"
             placeholder="Item description"
           />
         </div>
@@ -85,30 +86,79 @@
             type="number"
             name="amount"
             id="amount"
+            class="amount__input"
             placeholder="Item amount"
           />
         </div>
 
-        <!-- Submit button -->
-        <button type="submit" role="button">
-          <!-- check icon -->
+        <!-- Add button -->
+        <button class="btn__add">
           <i class="far fa-check-circle"></i>
         </button>
       </form>
     </section>
     <!-- Budget form input ends -->
 
-    <section class="budget__output"></section>
+    <section class="budget__output">
+      <div class="budget__output-container">
+        <!-- Income container -->
+        <div class="budget__output-income">
+          <div class="budget__output-income-text">Income</div>
+          <!--<div class="budget__output-income-lists">
+            <div class="budget__output-income-list" id="income-0">
+              <div class="budget__output-income-desc">Received salary</div>
+              <div class="budget__output-income-list-item">
+                <div class="budget__output-income-val">+ 45,000.00</div>
+                <button class="btn-delete-icon" role="button">
+                  <i class="far fa-times-circle"></i>
+                </button>
+              </div>
+            </div>
+            <div class="budget__output-income-list" id="income-1">
+              <div class="budget__output-income-desc">Sold car</div>
+              <div class="budget__output-income-list-item">
+                <div class="budget__output-income-val">+ 550,000.00</div>
+                <button class="btn-delete-icon" role="button">
+                  <i class="far fa-times-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>-->
+        </div>
+
+        <!-- Expense container -->
+        <div class="budget__output-expense">
+          <div class="budget__output-expense-text">Expenses</div>
+          <!--<div class="budget__output-expense-lists">
+            <div class="budget__output-expense-list" id="expense-0">
+              <div class="budget__output-expense-desc">Purchased groceries</div>
+              <div class="budget__output-expense-list-item">
+                <div class="budget__output-expense-val">- 45,000.00</div>
+                <div class="budget__output-expense-percentage">10%</div>
+                <button class="btn-delete-icon" role="button">
+                  <i class="far fa-times-circle"></i>
+                </button>
+              </div>
+            </div>
+            <div class="budget__output-expense-list" id="expense-1">
+              <div class="budget__output-expense-desc">
+                Purchased food items
+              </div>
+              <div class="budget__output-expense-list-item">
+                <div class="budget__output-expense-val">- 15,000.00</div>
+                <div class="budget__output-expense-percentage">5%</div>
+                <button class="btn-delete-icon" role="button">
+                  <i class="far fa-times-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </section>
 
     <!-- Js -->
     <script src="./js/fontawesome/all.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
-
-<!-- 
-
-    
-    <i class="far fa-times-circle"></i>
-    
- -->
