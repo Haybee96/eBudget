@@ -11,32 +11,104 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- Icon -->
+    <link rel="stylesheet" href="./css/fontawesome/all.min.css" />
   </head>
 
   <body>
+    <!-- Header - Logo & year -->
     <header>
       <nav>
         <div class="logo">
           <h4>eBudget</h4>
         </div>
+        <div class="author__profile" title="Author -> Abeeb">
+          <a href="https://github.com/Haybee96"
+            ><i class="fab fa-github"></i> Github</a
+          >
+        </div>
         <div class="date">
-          <p>Available budget in January, 2010</p>
+          <p>Budget in %month, year%</p>
         </div>
       </nav>
     </header>
+    <!-- Header ends -->
 
+    <!-- Budget display -->
     <section class="budget__display">
-      <!--  -->
-    </section>
+      <div class="budget__incexp">
+        <!-- Income budget -->
+        <div class="budget__income">
+          <div class="budget__income-text">Income</div>
+          <div class="budget__income-value">+ 5,100</div>
+        </div>
 
+        <!-- Budget value -->
+        <div class="budget__value">+ N 2,508.99</div>
+
+        <!-- Expense budget -->
+        <div class="budget__expense">
+          <div class="budget__expense-text">Expense</div>
+          <div class="budget__expense-box">
+            <div class="budget__expense-value">- 1,500</div>
+            <div class="budget__expense-percentage">27%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Budget display ends -->
+
+    <!-- Budget form input -->
     <section class="budget__form">
-      <!--  -->
-    </section>
+      <form action="#">
+        <!-- Form type -->
+        <div class="budget__form-type">
+          <select name="select" id="select">
+            <option value="+" selected>+</option>
+            <option value="-">-</option>
+          </select>
+        </div>
 
-    <section class="budget__output">
-      <!--  -->
-    </section>
+        <!-- Form description -->
+        <div class="budget__form-desc">
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Item description"
+          />
+        </div>
 
+        <!-- Form amount -->
+        <div class="budget__form-amount">
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            placeholder="Item amount"
+          />
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" role="button">
+          <!-- check icon -->
+          <i class="far fa-check-circle"></i>
+        </button>
+      </form>
+    </section>
+    <!-- Budget form input ends -->
+
+    <section class="budget__output"></section>
+
+    <!-- Js -->
+    <script src="./js/fontawesome/all.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
+
+<!-- 
+
+    
+    <i class="far fa-times-circle"></i>
+    
+ -->

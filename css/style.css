@@ -6,13 +6,19 @@
   --color-white: #fff;
   --color-light-red: #f73a1d;
   --color-dark-red: #a71f0a;
+  --color-body-bg: #eeeeee38;
 
   /* Fonts */
   --global-font-size: 62.5%;
   --global-font-family: "PT Sans", sans-serif;
+  --inner-font: sans-serif;
+
+  --line-height: 1.7;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -25,10 +31,19 @@ html {
 body {
   font-family: var(--global-font-family);
   font-size: var(--global-font-size);
+  line-height: var(--line-height);
+  background-color: var(--color-body-bg);
+}
+
+header {
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-bottom: 1px dotted var(--color-light-blue);
+  background-color: #fff;
 }
 
 nav {
-  margin: 0.8rem 2rem 0 2rem;
+  margin: 0 2rem 0 2rem;
+  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,4 +53,123 @@ nav {
 nav .logo h4,
 nav .date {
   color: var(--color-dark-blue);
+}
+
+nav .date p {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+nav .date .year {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.author__profile a {
+  text-decoration: none;
+  font-family: var(--global-font-family);
+  color: var(--color-dark);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.author__profile a:hover {
+  color: var(--color-light-blue);
+  box-shadow: 0 0.5rem 7rem rgba(0, 0, 0, 0.2);
+}
+
+.budget__display .budget__value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--inner-font);
+}
+
+.budget__incexp {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.budget__incexp > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.budget__incexp .budget__income,
+.budget__incexp .budget__expense {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.budget__incexp .budget__income {
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+
+.budget__incexp .budget__expense {
+  color: var(--color-white);
+  background-color: var(--color-light-red);
+}
+
+.budget__expense-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.budget__expense-box .budget__expense-percentage {
+  background-color: var(--color-dark-red);
+  padding: 0 0.1rem;
+  min-width: 35px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.4rem;
+  font-family: var(--inner-font);
+}
+
+.budget__form {
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form > :not(:last-child) {
+  margin-right: 0.2rem;
+}
+
+form select,
+form input[type="text"],
+form input[type="number"] {
+  font-size: 1rem;
+  font-family: var(--global-font-family);
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--color-light-blue);
+  outline: none;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+form input[type="text"] {
+  min-width: 400px;
+}
+
+form button {
+  font-size: 2.3rem;
+  color: var(--color-light-blue);
+
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
