@@ -1,0 +1,157 @@
+/* big tab to desktops */
+@media only screen and (max-width: 1100px) {
+  .budget__output-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .budget__output-income,
+  .budget__output-expense {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Small tab to big tab: 768px to 1023px */
+@media only screen and (max-width: 1000px) {
+  .budget__incexp {
+    margin: 1.5rem 0 2.5rem 0;
+  }
+  .budget__display .budget__value {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .budget__incexp .budget__income,
+  .budget__incexp .budget__expense {
+    min-width: 250px;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+    font-weight: 700;
+  }
+  form .type__input,
+  form .description__input,
+  form .amount__input {
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+  }
+  form .description__input {
+    width: 270px;
+  }
+  .btn__add {
+    font-size: 1.7rem;
+  }
+}
+
+/* Small phones to small tab: 481px to 767px */
+@media only screen and (max-width: 767px) {
+  .budget__incexp {
+    margin: 1rem 0 2rem 0;
+  }
+  .budget__display .budget__value {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .budget__incexp .budget__income,
+  .budget__incexp .budget__expense {
+    min-width: 200px;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    font-weight: 700;
+  }
+  form .type__input,
+  form .description__input,
+  form .amount__input {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+  form .description__input {
+    width: 250px;
+  }
+  .btn__add {
+    font-size: 1.7rem;
+  }
+  footer {
+    margin: 0 2rem;
+  }
+}
+
+/* Small phones: 481px to 562px */
+@media only screen and (max-width: 562px) {
+  .budget__incexp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .budget__incexp .budget__income {
+    margin-left: 0.9rem;
+  }
+  .budget__display,
+  .budget__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form > :not(:last-child) {
+    margin-bottom: 0.3rem;
+  }
+  form .type__input,
+  form .description__input,
+  form .amount__input {
+    width: 200px;
+  }
+  .btn__add {
+    font-size: 1.5rem;
+  }
+  footer {
+    margin: 0 8rem;
+    font-size: 0.8rem;
+    padding: 0;
+  }
+}
+
+/* 550px down */
+@media only screen and (max-width: 550px) {
+  .budget__output-income-lists,
+  .budget__output-expense-lists {
+    width: 250px;
+  }
+  .budget__output-income-desc,
+  .budget__output-expense-desc {
+    font-size: 0.8rem;
+  }
+  .budget__output-income-list-item,
+  .budget__output-expense-list-item {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .budget__output-expense-percentage {
+    display: none;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    margin: 0;
+  }
+  nav {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  }
+}

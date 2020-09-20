@@ -7,6 +7,7 @@
   --color-light-red: #f73a1d;
   --color-dark-red: #a71f0a;
   --color-body-bg: #eeeeee38;
+  --color-description: #000000a1;
 
   /* Fonts */
   --global-font-size: 62.5%;
@@ -65,19 +66,6 @@ nav .date .year {
   font-style: italic;
 }
 
-.author__profile a {
-  text-decoration: none;
-  font-family: var(--global-font-family);
-  color: var(--color-dark);
-  font-size: 1rem;
-  transition: all 0.3s;
-}
-
-.author__profile a:hover {
-  color: var(--color-light-blue);
-  box-shadow: 0 0.5rem 7rem rgba(0, 0, 0, 0.2);
-}
-
 .budget__display .budget__value {
   font-size: 2.5rem;
   font-weight: 700;
@@ -87,6 +75,7 @@ nav .date .year {
 .budget__incexp {
   margin: 1.5rem 0;
   display: flex;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -187,14 +176,11 @@ form button:active {
   transform: translateY(1px);
 }
 
-.budget_output {
-  /* background-attachment: scroll; */
-}
-
 .budget__output-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 1rem 0;
 }
 
 .budget__output-income .budget__output-income-text,
@@ -240,6 +226,11 @@ form button:active {
 .budget__output-income-val,
 .btn-delete-icon {
   color: var(--color-light-blue);
+  transition: all 0.2s linear;
+}
+
+.btn-delete-icon:hover {
+  transform: translateX(10px);
 }
 
 .budget__output-expense-val,
@@ -261,6 +252,11 @@ form button:active {
   margin-bottom: 0.3rem;
 }
 
+.budget__output-income-desc,
+.budget__output-expense-desc {
+  color: var(--color-description);
+}
+
 .budget__output-expense-percentage {
   background-color: var(--color-dark-red);
   padding: 0 0.1rem;
@@ -280,4 +276,28 @@ form button:active {
 
 .red-focus:focus {
   border: 1px solid var(--color-light-red);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8rem;
+  font-family: var(--global-font-family);
+  color: var(--color-description);
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+footer .author__profile a {
+  text-decoration: none;
+  transition: all 0.3s linear;
+  color: var(--color-description);
+}
+
+footer .author__profile a:hover {
+  color: var(--color-white);
+  border-radius: 100px;
+  background-color: var(--color-dark);
+  padding: 0.2rem 0.7rem;
 }

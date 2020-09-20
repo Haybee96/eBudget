@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/responsive.css" />
     <!-- Icon -->
     <link rel="stylesheet" href="./css/fontawesome/all.min.css" />
   </head>
@@ -22,13 +23,9 @@
         <div class="logo">
           <h4>eBudget</h4>
         </div>
-        <div class="author__profile" title="Author -> Abeeb">
-          <a href="https://github.com/Haybee96/eBudget"
-            ><i class="fab fa-github"></i> Github</a
-          >
-        </div>
+
         <div class="date">
-          <p>Budget in <span>%month, year%</span></p>
+          <p>Budget in <span>September, 2020</span></p>
         </div>
       </nav>
     </header>
@@ -104,7 +101,8 @@
         <!-- Income container -->
         <div class="budget__output-income">
           <div class="budget__output-income-text">Income</div>
-          <!--<div class="budget__output-income-lists">
+          <!-- Comment start -->
+          <div class="budget__output-income-lists">
             <div class="budget__output-income-list" id="income-0">
               <div class="budget__output-income-desc">Received salary</div>
               <div class="budget__output-income-list-item">
@@ -123,13 +121,15 @@
                 </button>
               </div>
             </div>
-          </div>-->
+          </div>
+          <!-- Comment end -->
         </div>
 
         <!-- Expense container -->
         <div class="budget__output-expense">
           <div class="budget__output-expense-text">Expenses</div>
-          <!--<div class="budget__output-expense-lists">
+          <!-- Comment start -->
+          <div class="budget__output-expense-lists">
             <div class="budget__output-expense-list" id="expense-0">
               <div class="budget__output-expense-desc">Purchased groceries</div>
               <div class="budget__output-expense-list-item">
@@ -152,10 +152,21 @@
                 </button>
               </div>
             </div>
-          </div>-->
+          </div>
+          <!-- Comment end -->
         </div>
       </div>
     </section>
+    <footer>
+      <div class="copy">
+        <p>&copy; <span class="year">2020</span> by Abeeb Ayinla.</p>
+      </div>
+      <div class="author__profile" title="Author -> Abeeb">
+        <a href="https://github.com/Haybee96/eBudget"
+          ><i class="fab fa-github"></i> Github</a
+        >
+      </div>
+    </footer>
 
     <!-- Js -->
     <script src="./js/fontawesome/all.min.js"></script>
