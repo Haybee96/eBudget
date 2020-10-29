@@ -25,7 +25,7 @@
         </div>
 
         <div class="date">
-          <p>Budget in <span>September, 2020</span></p>
+          <p>Budget in <span>%month%, %year%</span></p>
         </div>
       </nav>
     </header>
@@ -57,7 +57,7 @@
 
     <!-- Budget form input -->
     <section class="budget__form">
-      <form>
+      <div class="form">
         <!-- Form type -->
         <div class="budget__form-type">
           <select class="type__input" id="select">
@@ -84,7 +84,7 @@
             name="amount"
             id="amount"
             class="amount__input"
-            placeholder="Item amount"
+            placeholder="Amount"
           />
         </div>
 
@@ -92,7 +92,7 @@
         <button class="btn__add">
           <i class="far fa-check-circle"></i>
         </button>
-      </form>
+      </div>
     </section>
     <!-- Budget form input ends -->
 
@@ -101,9 +101,9 @@
         <!-- Income container -->
         <div class="budget__output-income">
           <div class="budget__output-income-text">Income</div>
-          <!-- Comment start -->
+
           <div class="budget__output-income-lists">
-            <div class="budget__output-income-list" id="income-0">
+            <!--<div class="budget__output-income-list" id="income-0">
               <div class="budget__output-income-desc">Received salary</div>
               <div class="budget__output-income-list-item">
                 <div class="budget__output-income-val">+ 45,000.00</div>
@@ -120,17 +120,16 @@
                   <i class="far fa-times-circle"></i>
                 </button>
               </div>
-            </div>
+            </div>-->
           </div>
-          <!-- Comment end -->
         </div>
 
         <!-- Expense container -->
         <div class="budget__output-expense">
           <div class="budget__output-expense-text">Expenses</div>
-          <!-- Comment start -->
+
           <div class="budget__output-expense-lists">
-            <div class="budget__output-expense-list" id="expense-0">
+            <!--<div class="budget__output-expense-list" id="expense-0">
               <div class="budget__output-expense-desc">Purchased groceries</div>
               <div class="budget__output-expense-list-item">
                 <div class="budget__output-expense-val">- 45,000.00</div>
@@ -151,15 +150,14 @@
                   <i class="far fa-times-circle"></i>
                 </button>
               </div>
-            </div>
+            </div>-->
           </div>
-          <!-- Comment end -->
         </div>
       </div>
     </section>
     <footer>
       <div class="copy">
-        <p>&copy; <span class="year">2020</span> by Abeeb Ayinla.</p>
+        <p><span class="year">%year%</span> by Abeeb Ayinla.</p>
       </div>
       <div class="author__profile" title="Author -> Abeeb">
         <a href="https://github.com/Haybee96/eBudget"

@@ -28,13 +28,13 @@
     padding: 0.4rem 0.7rem;
     font-weight: 700;
   }
-  form .type__input,
-  form .description__input,
-  form .amount__input {
+  .form .type__input,
+  .form .description__input,
+  .form .amount__input {
     font-size: 1rem;
     padding: 0.5rem 0.7rem;
   }
-  form .description__input {
+  .form .description__input {
     width: 270px;
   }
   .btn__add {
@@ -58,20 +58,20 @@
     padding: 0.3rem 0.6rem;
     font-weight: 700;
   }
-  form .type__input,
-  form .description__input,
-  form .amount__input {
+  .form .type__input,
+  .form .description__input,
+  .form .amount__input {
     font-size: 0.9rem;
     padding: 0.4rem 0.6rem;
   }
-  form .description__input {
+  .form .description__input {
     width: 250px;
   }
   .btn__add {
     font-size: 1.7rem;
   }
   footer {
-    margin: 0 2rem;
+    margin: 1rem 2rem;
   }
 }
 
@@ -94,18 +94,18 @@
     align-items: center;
     margin-top: 1rem;
   }
-  form {
+  .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  form > :not(:last-child) {
+  .form > :not(:last-child) {
     margin-bottom: 0.3rem;
   }
-  form .type__input,
-  form .description__input,
-  form .amount__input {
+  .form .type__input,
+  .form .description__input,
+  .form .amount__input {
     width: 200px;
   }
   .btn__add {
@@ -114,7 +114,6 @@
   footer {
     margin: 0 8rem;
     font-size: 0.8rem;
-    padding: 0;
   }
 }
 
